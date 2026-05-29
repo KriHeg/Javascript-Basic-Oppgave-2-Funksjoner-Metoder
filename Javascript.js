@@ -45,8 +45,7 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 // Skriv koden for oppgave 2 her
 const makeUpperCaps = (sentence) => {
-  let coolsentence = sentence.toUpperCase() + "!";
-  return coolsentence;
+  return sentence.toUpperCase() + "!";;
 };
 
 makeUpperCaps("Dette er kult");
@@ -76,7 +75,7 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 // Skriv koden for oppgave 3 her
 function dayTimeGreeter(name, number) {
   let message = "";
-  if (number === 0 || number > 23) {
+  if (number <0 || number > 23) {
     message = "Ugyldig tid";
   } else if (number > 0 && number < 6) {
     message = "god natt" + " " + name;
@@ -113,7 +112,6 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 function cutArray(list) {
   list.shift();
   list.pop();
-  const shownArray = list;
   return list;
 }
 cutArray(["rød", "Grønn", "Blå", "Gul"]);
@@ -140,9 +138,7 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 // Skriv koden for oppgave 5 her
 function replaceText(text) {
-  let message = text.replaceAll("vanskelig", "gøy");
-  message = message.trim();
-  return message;
+  return text.replaceAll("vanskelig", "gøy").trim();
 }
 replaceText("  Javascript er vanskelig   ");
 replaceText(" Det er vanskelig å bruke metoder ");
@@ -182,7 +178,7 @@ console.log(items);
 items.splice(0, 2, "Markeringspenn");
 console.log(items);
 
-let arrayToString = items.join("|");
+let arrayToString = items.join(" | ");
 console.log(arrayToString);
 
 const onlye = items.filter((item) => item.includes("e"));
